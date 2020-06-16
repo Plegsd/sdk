@@ -390,7 +390,8 @@ struct MEGA_API LocalNode : public File
     ~LocalNode();
 
     // recursively update child filter state.
-    void applyFilters();
+    // returns true if any nodes have become unignored.
+    bool applyFilters();
 
     // clear filters.
     void clearFilters();
